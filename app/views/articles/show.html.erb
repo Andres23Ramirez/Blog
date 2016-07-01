@@ -5,13 +5,18 @@
 	Escrito por: <%= @article.usuer.email %>
 </p>
 
+<% end %>
+
 <p>
 	Visitas: <%= @article.visits_counts %>
 </p>
-<% end %>
 
-<div>
+<div class="field">
 	<%= @article.body %>
+</div>
+
+<div class="field">
+	<%= image_tag @article.cover.url(:thumb) %>
 </div>
 
 <div class="field">
